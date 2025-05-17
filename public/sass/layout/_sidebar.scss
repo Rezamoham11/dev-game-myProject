@@ -15,7 +15,8 @@
   overflow-y: auto;
 
   @include Responsive(tabletL) {
-    width: 100%;
+    width: 99vw;
+    height: 100%;
     position: fixed;
     transform: translateX(-100%);
     z-index: 1000;
