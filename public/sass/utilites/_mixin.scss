@@ -1,0 +1,49 @@
+/** @format */
+
+@mixin centrizeTag($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin positionCenter() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+//responsive
+/*
+!0-576px=Phone
+!576px-768px=Phone Landscape
+!768px-992px=Tablet Portrait
+!992px-1200px=Tablet Landscape
+!1200px - 1800px=laptop
+!1800px >=Big Desktop
+
+*/
+@mixin Responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 36em) {
+      @content;
+    }
+  } @else if $breakpoint == phoneL {
+    @media screen and (max-width: 48em) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (max-width: 62em) {
+      @content;
+    }
+  } @else if $breakpoint == tabletL {
+    @media screen and (max-width: 75em) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+}

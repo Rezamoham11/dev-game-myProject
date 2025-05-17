@@ -1,0 +1,45 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @include Responsive(phone) {
+    font-size: 43.75%;
+  }
+  @include Responsive(phoneL) {
+    font-size: 50%;
+  }
+  @include Responsive(tablet) {
+    font-size: 55.25%;
+  }
+  @include Responsive(tabletL) {
+    font-size: 58.5%;
+  }
+}
+ul,
+li {
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+body {
+  font-family: $fontSans, $fontRubik, $fontPoppins;
+  background-color: $color-bg;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: $color-primery;
+}

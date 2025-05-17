@@ -1,0 +1,209 @@
+/** @format */
+
+.streams {
+  &__content {
+    &-main {
+      height: 34.375rem;
+      @include centrizeTag();
+      gap: 2rem;
+
+      @include Responsive(tablet) {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+      }
+    }
+
+    &-left {
+      width: 70%;
+      height: 100%;
+      background-color: $color-primery;
+      border-radius: 0.625rem;
+      padding: 1.5625rem;
+      position: relative;
+      overflow: hidden;
+
+      @include Responsive(tablet) {
+        width: 100%;
+        height: 20rem;
+      }
+    }
+
+    &-discount {
+      width: 15.625rem;
+      height: 3.125rem;
+      background-color: $color-discount;
+      font-size: $font-size-defult;
+      font-family: $fontRubik, sans-serif;
+      font-weight: bold;
+      position: absolute;
+      right: -4.375rem;
+      top: 0.9375rem;
+      z-index: 99;
+      clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+      transform: rotate(35deg);
+      @include centrizeTag();
+      color: $color-white;
+
+      @include Responsive(tablet) {
+        width: 12.5rem;
+        height: 2.5rem;
+        top: 0.625rem;
+      }
+      @include Responsive(phone) {
+        width: 10.5rem;
+        height: 2.5rem;
+        top: 1rem;
+      }
+    }
+
+    &-pic {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.625rem;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+
+        .streams__content-img {
+          transform: scale(110%, 110%);
+        }
+
+        .streams__content-card {
+          top: 0;
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.6s ease-in;
+    }
+
+    &-card {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      @include centrizeTag();
+      position: absolute;
+      top: 100%;
+      right: 0;
+      font-weight: bold;
+      font-size: $font-size-lg;
+      font-family: $fontRubik, sans-serif;
+      letter-spacing: 1.25rem;
+      transition: all 0.6s ease-in;
+      color: $color-white;
+      text-shadow: 0 0 0.3125rem $color-black;
+
+      @include Responsive(tablet) {
+        letter-spacing: 0.625rem;
+      }
+    }
+
+    &-right {
+      height: 100%;
+      width: 27%;
+      border-radius: 0.9375rem;
+
+      @include Responsive(tablet) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-item {
+      width: 100%;
+      height: 49%;
+      background-color: $color-primery;
+      margin-bottom: 0.625rem;
+      padding: 0.9375rem;
+      border-radius: 0.625rem;
+      position: relative;
+      overflow: hidden;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.625rem;
+        transition: all 0.6s ease-in;
+
+        &:hover {
+          transform: scale(105%, 105%);
+        }
+      }
+
+      @include Responsive(tablet) {
+        height: 12.5rem;
+        padding: 0.625rem;
+      }
+    }
+
+    &-text {
+      color: $color-white;
+      font-weight: bold;
+      position: absolute;
+      top: 1.5625rem;
+      left: 1.5625rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3125rem;
+
+      @include Responsive(tablet) {
+        top: 0.9375rem;
+        left: 0.9375rem;
+      }
+    }
+
+    &-title {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+
+      @include Responsive(tablet) {
+        font-size: 0.625rem;
+      }
+    }
+
+    &-subtitle {
+      font-size: $font-size-sm;
+
+      @include Responsive(tablet) {
+      }
+    }
+
+    &-play {
+      background-color: $color-secendry;
+      width: 3.125rem;
+      height: 3.125rem;
+      @include centrizeTag();
+      border-radius: 100%;
+      color: $color-white;
+      font-size: $font-size-lg;
+      @include positionCenter();
+      box-shadow: 0 0 0.625rem $color-shadow;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: lighten($color-secendry, 10%);
+      }
+
+      @include Responsive(tablet) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}

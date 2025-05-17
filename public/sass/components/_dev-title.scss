@@ -1,0 +1,83 @@
+/** @format */
+
+.dev-title {
+  @include centrizeTag(space-between);
+  width: 100%;
+  margin: 1.5625rem 0;
+
+  @include Responsive(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+  }
+
+  &__title {
+    color: $color-white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include Responsive(phone) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__items {
+    @include centrizeTag(flex-start);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    @include Responsive(phone) {
+      gap: 0.625rem;
+    }
+  }
+
+  &__item {
+    font-family: $fontRubik;
+    font-size: $font-size-defult;
+    font-weight: bold;
+    color: $color-white;
+    padding: 0.3125rem 0.625rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+
+    &.active {
+      color: $color-secendry;
+      background-color: $color-primery;
+    }
+
+    &:hover {
+      background-color: $color-primery;
+    }
+
+    @include Responsive(phone) {
+      font-size: $font-size-sm;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  &__btns {
+    @include centrizeTag();
+    gap: 0.625rem;
+  }
+
+  &__btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    @include centrizeTag();
+    border-radius: 0.9375rem;
+    transition: all 0.9s ease-in-out;
+
+    &-active {
+      background-color: $color-secendry;
+      transition: all 0.9s ease-in-out;
+      cursor: pointer;
+    }
+
+    &-icon {
+      color: $color-white;
+      font-size: $font-size-lg;
+      font-weight: bold;
+    }
+  }
+}

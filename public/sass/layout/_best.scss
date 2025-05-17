@@ -1,0 +1,147 @@
+/** @format */
+
+.best {
+  width: 100%;
+  padding: 0.9375rem 0;
+
+  &__content {
+    &-main {
+      width: 100%;
+      @include centrizeTag();
+    }
+
+    &-items {
+      width: 100%;
+      @include centrizeTag();
+      gap: 0.625rem;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      margin-top: 2.5rem;
+
+      @include Responsive(phone) {
+        margin-top: 1.875rem;
+      }
+    }
+
+    &-number {
+      width: 3.125rem;
+      height: 3.125rem;
+      display: inline-block;
+      background-image: url(/public/images/number.png);
+      background-size: 15.625rem;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -2.8125rem;
+      left: 0;
+      z-index: -1;
+
+      &--1 {
+        background-position: -0.0625rem 0;
+      }
+
+      &--2 {
+        background-position: -2.5rem 0;
+      }
+
+      &--3 {
+        background-position: -5.5625rem 0;
+      }
+
+      &--4 {
+        background-position: -9.3125rem 0;
+      }
+
+      &--5 {
+        background-position: -12.9375rem 0;
+      }
+
+      @include Responsive(phone) {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: 12.5rem;
+        top: -2.1875rem;
+
+        &--1 {
+          background-position: -0.05rem 0;
+        }
+
+        &--2 {
+          background-position: -2rem 0;
+        }
+
+        &--3 {
+          background-position: -4.45rem 0;
+        }
+
+        &--4 {
+          background-position: -7.45rem 0;
+        }
+
+        &--5 {
+          background-position: -10.35rem 0;
+        }
+      }
+    }
+
+    &-pic {
+      width: 100%;
+      height: 12.5rem;
+      border: 0.3125rem solid #fff;
+      border-radius: 1.5625rem;
+      overflow: hidden;
+
+      @include Responsive(phone) {
+        height: 9.375rem;
+      }
+
+      @include Responsive(phoneL) {
+        height: 10.625rem;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+
+    &-title {
+      margin: 1.25rem 0;
+      @include centrizeTag();
+      flex-direction: column;
+      font-family: $fontRubik;
+      gap: 0.625rem;
+
+      &-subtitle {
+        color: $color-white;
+        font-size: $font-size-lg;
+
+        @include Responsive(phone) {
+          font-size: $font-size-sm;
+        }
+      }
+
+      &-position {
+        color: $color-filter;
+        font-size: $font-size-sm;
+
+        &::after {
+          content: " #10";
+          color: $color-white;
+          margin-left: 0.125rem;
+        }
+
+        @include Responsive(phone) {
+        }
+      }
+    }
+  }
+}

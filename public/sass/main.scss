@@ -1,0 +1,36 @@
+/** @format */
+
+//!!!(1)utilites directory
+@import "utilites/varable";
+@import "utilites/mixin";
+@import "utilites/function";
+//!!!(2)base directory
+@import "base/reset";
+@import "base/typography";
+@import "base/defulte";
+//!!!(3)venodr directory
+@import "vendor/bootstrap";
+@import "vendor/jquery";
+//!!!(4)themes directory
+@import "themes/admin";
+@import "themes/theme";
+//!!!(5)leyout directory
+@import "layout/sidebar";
+@import "layout/devgame";
+@import "layout/header";
+@import "layout/slider";
+@import "layout/popular";
+@import "layout/best";
+@import "layout/turnoments";
+@import "layout/streams";
+@import "layout/footer";
+@import "layout/phoneNav";
+//!!!(6)components
+@import "components/buttons";
+@import "components/slider";
+@import "components/directacssess";
+@import "components/dev-title";
+//!!!(7)pages
+@import "pages/home";
+@import "pages/product";
+@import "pages/search";

@@ -1,0 +1,9 @@
+/** @format */
+
+.devgame {
+  background-color: $color-bg;
+  @include Responsive(phoneL) {
+    width: 100% !important;
+    height: auto;
+  }
+}

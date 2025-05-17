@@ -1,0 +1,102 @@
+/** @format */
+
+//Footer
+.footer {
+  width: 100%;
+  background-color: $color-bg;
+  margin-top: 1.25rem; /* 20px / 16 */
+  padding: 1.875rem 0; /* 30px / 16 */
+  z-index: 4;
+
+  //Footer Content
+  &__content {
+    width: 65%;
+    margin: 0 auto;
+    padding: 1.875rem; /* 30px / 16 */
+    /* Assuming @include centrizeTag(space-between) is a mixin, no conversion needed */
+    @include centrizeTag();
+    gap: 6.25rem; /* 100px / 16 */
+
+    &-items {
+      display: flex;
+      gap: 0.625rem; /* 10px / 16 */
+    }
+
+    &-pic {
+      /* Assuming @include centrizeTag() is a mixin, no conversion needed */
+      @include centrizeTag();
+      flex-direction: column;
+      gap: 1.25rem; /* 20px / 16 */
+    }
+
+    &-img {
+      width: 9.375rem; /* 150px / 16 */
+      object-fit: cover;
+    }
+
+    &-title {
+      margin-top: 0.625rem; /* 10px / 16 */
+      font-size: $font-size-defult; /* Assuming this is a variable, no conversion */
+      font-weight: bold;
+      color: $color-white;
+    }
+
+    &-list {
+      display: flex;
+      gap: 1.5625rem; /* 25px / 16 */
+    }
+
+    &-link {
+      font-size: $font-size-defult; /* Assuming this is a variable, no conversion */
+      font-weight: bold;
+      color: $color-filter;
+      font-family: $fontRubik, sans-serif;
+    }
+
+    //Footer Content Socialmedia
+    &-socialmedia {
+      /* Assuming @include centrizeTag() is a mixin, no conversion needed */
+      @include centrizeTag();
+      gap: 0.9375rem; /* 15px / 16 */
+    }
+
+    &-social {
+      width: 2.8125rem; /* 45px / 16 */
+      height: 2.8125rem; /* 45px / 16 */
+      background-color: $color-bg;
+      box-shadow: 0 0 1.25rem $color-shadow; /* 20px / 16 */
+      border-radius: 0.625rem; /* 10px / 16 */
+      font-size: $font-size-lg; /* Assuming this is a variable, no conversion */
+      /* Assuming @include centrizeTag() is a mixin, no conversion needed */
+      @include centrizeTag();
+      position: relative;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: translatey(-0.3125rem); /* -5px / 16 */
+
+        .footer__content-icon {
+          transform: rotateY(360deg);
+          color: $color-secendry;
+        }
+      }
+    }
+
+    &-icon {
+      font-size: $font-size-defult; /* Assuming this is a variable, no conversion */
+      font-weight: bold;
+      color: $color-filter;
+      font-family: $fontRubik, sans-serif;
+      color: $color-white;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &-copyright {
+      font-size: $font-size-defult; /* Assuming this is a variable, no conversion */
+      font-weight: bold;
+      color: $color-filter;
+      font-family: $fontRubik, sans-serif;
+    }
+  }
+}

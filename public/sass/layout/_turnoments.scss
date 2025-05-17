@@ -1,0 +1,733 @@
+/** @format */
+
+.turnoments {
+  &__content {
+    &-main {
+      width: 100%;
+      margin: 1.25rem 0;
+      @include centrizeTag(space-between);
+      gap: 0.625rem;
+
+      @include Responsive(tablet) {
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+    }
+
+    &-left {
+      width: 80%;
+      border-radius: 0.625rem;
+
+      @include Responsive(tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__battle {
+    width: 100%;
+    background-color: $color-primery;
+    border-radius: 0.625rem;
+    display: flex;
+    padding: 1.25rem 0.9375rem;
+    margin-bottom: 1.25rem;
+
+    &-left {
+      width: 65%;
+
+      @include Responsive(tablet) {
+        width: 100%;
+      }
+    }
+
+    &-head {
+      text-align: center;
+    }
+
+    &-title {
+      color: $color-white;
+      margin-bottom: 0.625rem;
+    }
+
+    &-subtitle {
+      color: $color-green;
+      font-size: $font-size-sm;
+      font-weight: bold;
+    }
+
+    &-teames {
+      width: 85%;
+      margin: 4.0625rem auto;
+      @include centrizeTag(space-between);
+      gap: 1.25rem;
+
+      @include Responsive(tablet) {
+        width: 100%;
+        margin: 1.25rem auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+      }
+    }
+
+    &-team {
+      @include centrizeTag();
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    &-flag {
+      &--1 {
+        width: 4.375rem;
+        height: 4.375rem;
+        border-radius: 100%;
+        background: conic-gradient(rgb(240, 6, 6) 25%, rgb(230, 10, 145) 0);
+        @include centrizeTag();
+        box-shadow: 0 0 1.25rem $color-shadow;
+
+        @include Responsive(tablet) {
+          width: 3.125rem;
+          height: 3.125rem;
+        }
+      }
+
+      &--2 {
+        width: 6.25rem;
+        height: 6.25rem;
+        border-radius: 100%;
+        background: conic-gradient(rgb(10, 6, 240) 25%, rgb(240, 6, 6) 0);
+        @include centrizeTag();
+        box-shadow: 0 0 1.25rem $color-shadow;
+
+        @include Responsive(tablet) {
+          width: 4.375rem;
+          height: 4.375rem;
+        }
+      }
+
+      &--3 {
+        width: 4.375rem;
+        height: 4.375rem;
+        border-radius: 100%;
+        background: conic-gradient(rgb(240, 196, 2) 25%, rgb(29, 6, 240) 25% 0);
+        @include centrizeTag();
+        box-shadow: 0 0 1.25rem $color-shadow;
+
+        @include Responsive(tablet) {
+          width: 3.125rem;
+          height: 3.125rem;
+        }
+      }
+    }
+
+    &-cyrcle {
+      &--1 {
+        width: 95%;
+        height: 95%;
+        border-radius: 100%;
+        background-image: radial-gradient(
+          circle,
+          #d31834 0,
+          #fa2142 50%,
+          #110736 100%
+        );
+        @include centrizeTag();
+      }
+
+      &--2 {
+        width: 95%;
+        height: 95%;
+        border-radius: 100%;
+        background-image: radial-gradient(
+          circle,
+          #110736 0,
+          #1d6d9b 50%,
+          #113549 100%
+        );
+        @include centrizeTag();
+      }
+
+      &--3 {
+        width: 95%;
+        height: 95%;
+        border-radius: 100%;
+        background-image: radial-gradient(
+          circle,
+          #888623 0,
+          #ebdd1b 50%,
+          #504a13 100%
+        );
+        @include centrizeTag();
+      }
+    }
+
+    &-pic {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-info {
+      @include centrizeTag();
+      flex-direction: column;
+      gap: 0.625rem;
+
+      &-name {
+        color: $color-white;
+        font-weight: bold;
+        font-size: $font-size-defult;
+      }
+
+      &-count {
+        color: $color-filter;
+        font-size: $font-size-sm;
+        font-weight: bold;
+      }
+    }
+
+    &-sward {
+      width: 3.125rem;
+
+      @include Responsive(tablet) {
+        width: 2rem;
+      }
+    }
+
+    &-prograss {
+      width: 95%;
+      height: 0.9375rem;
+      background-color: $color-bg;
+      border-radius: 0.9375rem;
+      margin: 1.25rem auto;
+
+      @include Responsive(tablet) {
+        width: 100%;
+        height: 0.625rem;
+      }
+
+      &-percent {
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          yellow 0%,
+          #e4ec7f 50%,
+          #ffffb7 70%
+        );
+        border-radius: 0.9375rem;
+        font-size: $font-size-sm;
+        font-weight: bold;
+        @include centrizeTag();
+
+        @include Responsive(tablet) {
+        }
+      }
+    }
+
+    &-right {
+      width: 35%;
+      height: 100%;
+      @include centrizeTag();
+      flex-direction: column;
+
+      @include Responsive(tablet) {
+        width: 100%;
+      }
+    }
+
+    &-thead {
+      width: 95%;
+      height: 2.1875rem;
+      @include centrizeTag();
+      gap: 1.25rem;
+      color: $color-white;
+      font-weight: bold;
+      border-radius: 0.625rem;
+
+      @include Responsive(tablet) {
+        width: 100%;
+        height: 1.875rem;
+      }
+    }
+
+    &-icon {
+      width: 2.1875rem;
+      height: 100%;
+      background-color: #1d6d9b;
+      @include centrizeTag();
+      border-radius: 0.625rem;
+      font-size: $font-size-defult;
+
+      @include Responsive(tablet) {
+        width: 1.875rem;
+        font-size: $font-size-sm;
+      }
+    }
+
+    &-group {
+      width: 90%;
+      height: 100%;
+      @include centrizeTag();
+      background-color: #1d6d9b;
+      border-radius: 0.625rem;
+      font-weight: bold;
+      font-size: $font-size-defult;
+
+      @include Responsive(tablet) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &-body {
+      width: 95%;
+      height: 100%;
+
+      @include Responsive(tablet) {
+        width: 100%;
+      }
+    }
+
+    &-items {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+    }
+
+    &-item {
+      max-width: 90%;
+      height: 2.5rem;
+      background-color: $color-bg;
+      margin: 0.625rem 0;
+      border-radius: 0.625rem;
+      @include centrizeTag(space-between);
+      gap: 0.3125rem;
+      padding: 0.3125rem 0.625rem;
+      transition: all 0.9s ease-in;
+
+      &.active {
+        background-color: $color-red;
+
+        .turnoments__battle-number,
+        .turnoments__battle-scores {
+          background-color: $color-redDark;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-redLight;
+
+        .turnoments__battle-number,
+        .turnoments__battle-scores {
+          background-color: $color-redDark;
+        }
+      }
+
+      @include Responsive(tablet) {
+        height: 2rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+
+    &-king {
+      width: 60%;
+      height: 100%;
+      @include centrizeTag(flex-start);
+      gap: 0.625rem;
+      color: $color-white;
+      font-size: $font-size-sm;
+
+      @include Responsive(tablet) {
+      }
+    }
+
+    &-number,
+    &-scores {
+      width: 1.875rem;
+      height: 100%;
+      background-color: $color-primery;
+      color: $color-white;
+      @include centrizeTag();
+      border-radius: 0.3125rem;
+      font-weight: bold;
+
+      @include Responsive(tablet) {
+        width: 1.5rem;
+      }
+    }
+
+    &-teamicon,
+    &-coin {
+      width: 1.875rem;
+      max-height: 90%;
+      object-fit: cover;
+
+      @include Responsive(tablet) {
+        width: 1.5rem;
+      }
+    }
+
+    &-teamname {
+      font-weight: bold;
+
+      @include Responsive(tablet) {
+      }
+    }
+
+    &-rate {
+      width: 40%;
+      height: 90%;
+      @include centrizeTag(space-between);
+    }
+
+    &-count {
+      color: $color-filter;
+      font-size: $font-size-sm;
+
+      @include Responsive(tablet) {
+      }
+    }
+  }
+
+  &__info {
+    &-item {
+      width: 100%;
+      background-color: $color-primery;
+      border-radius: 0.625rem;
+      @include centrizeTag(space-between);
+      padding: 0.9375rem;
+      margin-top: 0.625rem;
+      position: relative;
+      overflow: hidden;
+
+      @include Responsive(tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.625rem;
+        padding: 0.625rem;
+      }
+    }
+
+    &-game {
+      @include centrizeTag(flex-start);
+      gap: 0.625rem;
+
+      @include Responsive(tablet) {
+        width: 100%;
+      }
+    }
+
+    &-img {
+      width: 5rem;
+      overflow: hidden;
+
+      @include Responsive(tablet) {
+        width: 3.75rem;
+      }
+    }
+
+    &-pic {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-description {
+      @include centrizeTag(center, flex-start);
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    &-team {
+      color: $color-white;
+      font-weight: bold;
+      font-size: $font-size-defult;
+    }
+
+    &-count {
+      color: $color-filter;
+      font-size: $font-size-sm;
+      font-weight: bold;
+    }
+
+    &-name {
+      @include centrizeTag();
+      flex-direction: column;
+      gap: 0.625rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 0.1875rem;
+        height: 5.3125rem;
+        background-color: $color-filter;
+        position: absolute;
+        left: -1.5625rem;
+        transform: rotate(20deg);
+
+        @include Responsive(tablet) {
+          height: 3.75rem;
+          left: -0.9375rem;
+        }
+      }
+
+      @include Responsive(tablet) {
+        align-items: flex-start;
+      }
+    }
+
+    &-key {
+      color: $color-white;
+      font-weight: bold;
+      font-size: $font-size-sm;
+    }
+
+    &-value {
+      color: $color-filter;
+      font-size: $font-size-defult;
+      font-weight: bold;
+    }
+
+    &-percent {
+      width: 3.75rem;
+
+      @include Responsive(tablet) {
+        width: 3rem;
+      }
+    }
+
+    &-bg1 {
+      width: 7.5rem;
+      height: 100%;
+      background: linear-gradient(
+        110deg,
+        $color-purpleDark 0,
+        $color-purpleDark 30%,
+        $color-purple 31%,
+        $color-purple 100%
+      );
+      position: absolute;
+      top: 0;
+      right: 0;
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+      @include centrizeTag();
+      z-index: 35;
+
+      &.bg2 {
+        background: linear-gradient(
+          110deg,
+          $color-secendry-light 0,
+          $color-secendry-light 30%,
+          $color-secendry 31%,
+          $color-secendry 100%
+        );
+      }
+
+      @include Responsive(tablet) {
+        width: 5rem;
+      }
+    }
+
+    &-text {
+      color: $color-white;
+      font-weight: bold;
+      font-family: $fontRubik;
+      font-size: $font-size-sm;
+
+      @include Responsive(tablet) {
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    @include centrizeTag();
+    background-color: $color-secendry;
+    border-radius: 0.625rem;
+    margin: 0.625rem auto;
+    padding: 0.9375rem 0;
+
+    @include Responsive(tablet) {
+      padding: 0.625rem 0;
+    }
+
+    &-direct {
+      color: $color-white;
+      font-size: $font-size-defult;
+      font-family: $fontRubik;
+      font-weight: bold;
+
+      @include Responsive(tablet) {
+        font-size: $font-size-sm;
+      }
+    }
+  }
+
+  &__closing {
+    width: 25%;
+    height: 45.625rem;
+    background-color: $color-primery;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+
+    @include Responsive(tablet) {
+      width: 100%;
+      height: auto;
+    }
+
+    &-head {
+      text-align: center;
+    }
+
+    &-title {
+      width: 30%;
+      color: $color-white;
+      font-size: 1.5625rem;
+      margin-bottom: 0.625rem;
+      line-height: 1.875rem;
+    }
+
+    &-subtitle {
+      color: $color-green;
+      font-size: $font-size-defult;
+      font-weight: bold;
+    }
+
+    &-items {
+      margin: 3.125rem 0;
+    }
+
+    &-item {
+      margin: 2.5rem 0;
+    }
+
+    &-teams {
+      @include centrizeTag(space-between);
+
+      @include Responsive(tablet) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    &-team {
+      @include centrizeTag();
+      flex-direction: column;
+      gap: 0.625rem;
+
+      @include Responsive(tablet) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-info {
+      @include centrizeTag();
+      flex-direction: column;
+      margin-top: 1.5625rem;
+
+      &-name {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        color: $color-white;
+        margin-bottom: 0.3125rem;
+      }
+
+      &-count {
+        font-weight: bold;
+        font-size: $font-size-sm;
+        color: $color-filter;
+      }
+    }
+
+    &-score {
+      span {
+        font-size: 1.4375rem;
+        font-weight: bold;
+        font-family: $fontRubik, sans-serif;
+        color: $color-white;
+        letter-spacing: 0.25rem;
+        position: relative;
+        top: -1.875rem;
+      }
+    }
+
+    &-prograss {
+      width: 100%;
+      height: 0.9375rem;
+      background-color: $color-bg;
+      border-radius: 0.9375rem;
+      margin-top: 1.875rem;
+
+      @include Responsive(tablet) {
+        height: 0.625rem;
+        margin-top: 1.25rem;
+      }
+
+      &-persent {
+        width: 70%;
+        background: linear-gradient(
+          120deg,
+          yellow 0%,
+          #e4ec7f 50%,
+          #ffffb7 70%
+        );
+        border-radius: 0.9375rem;
+        height: 100%;
+        font-size: $font-size-sm;
+        @include centrizeTag();
+
+        @include Responsive(tablet) {
+        }
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      height: 3.125rem;
+      @include centrizeTag();
+      margin: 5.625rem 0;
+
+      @include Responsive(tablet) {
+        margin: 1.25rem 0;
+      }
+    }
+
+    &-link {
+      width: 90%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        #bf953f,
+        #fcf6ba,
+        #b38728,
+        #fbf5b7,
+        #aa771c
+      );
+      border-radius: 0.3125rem;
+      @include centrizeTag();
+      padding: 0.9375rem 0;
+      font-size: $font-size-defult;
+      font-family: $fontRubik;
+      color: $color-white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        letter-spacing: 0.1875rem;
+        background: linear-gradient(
+          to right,
+          #aa771c,
+          #fbf5b7,
+          #b38728,
+          #fcf6ba,
+          #bf953f
+        );
+      }
+
+      @include Responsive(tablet) {
+        font-size: $font-size-sm;
+        padding: 0.625rem 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/** @format */
+
+//font
+$fontSans: "DM Sans", sans-serif;
+$fontRubik: "Rubik", sans-serif;
+$fontPoppins: "Poppins", sans-serif;
+//////////////////////////////////////////////////
+
+// Public Style Text
+.text-white {
+  color: $color-white;
+  font-size: $font-size-title; /* Assuming this is 1.5625rem (25px / 16) from previous conversion */
+  font-weight: bold;
+}
+
+.text-pink {
+  color: $color-tertiary;
+  font-size: $font-size-title; /* Assuming this is 1.5625rem (25px / 16) from previous conversion */
+  font-weight: bold;
+}
+
+.fw {
+  font-weight: bold;
+}
+
+.bra {
+  border-radius: 0.625rem; /* 10px / 16 */
+}
