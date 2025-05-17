@@ -2,6 +2,19 @@
 
 .devgame {
   background-color: $color-bg;
+  // متناسب با عرض سایدبار
+  // margin-left: 17%; // ایجاد فضای برای سایدبار
+  transition: margin 0.3s ease; // انیمیشن برای تغییر margin
+
+  @include Responsive(tabletL) {
+    width: 100%;
+    margin-left: 0;
+
+    &.sidebar-open {
+      margin-left: 250px; // عرض سایدبار در موبایل
+    }
+  }
+
   @include Responsive(phoneL) {
     width: 100% !important;
     height: auto;
